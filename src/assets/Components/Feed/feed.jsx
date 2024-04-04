@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import feedLists from "../../Helpers/feed";
 import { Link } from "react-router-dom";
 import { API_KEY, value_converter } from "../../Helpers/data";
 import moment from "moment";
@@ -17,7 +16,7 @@ const feed = ({ category }) => {
     fetchData();
   }, [category]);
   return (
-    <div className="grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 p-2 gap-3">
+    <>
       {data.map((item, index) => {
         return (
           <Link
@@ -27,20 +26,20 @@ const feed = ({ category }) => {
           >
             <img
               src={item.snippet.thumbnails.medium.url}
-              className="w-full rounded"
+              className="w-full rounded-xl"
             />
             <div className="py-2">
-            <h2 className="text-sm font-semibold">{item.snippet.title}</h2>
-            <h3 className="text-xs">{item.snippet.channelTitle}</h3>
-            <p className="text-xs">
-              {value_converter(item.statistics.viewCount)} views •{" "}
-              {moment(item.snippet.publishedAt).fromNow()}
-            </p>
+              <h2 className="text-sm font-semibold">{item.snippet.title}</h2>
+              <h3 className="text-xs">{item.snippet.channelTitle}</h3>
+              <p className="text-xs">
+                {value_converter(item.statistics.viewCount)} views •{" "}
+                {moment(item.snippet.publishedAt).fromNow()}
+              </p>
             </div>
           </Link>
         );
       })}
-    </div>
+    </>
   );
 };
 

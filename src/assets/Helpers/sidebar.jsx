@@ -11,46 +11,46 @@ import { FaRegNewspaper } from "react-icons/fa6";
 const sidebarLists = [
   {
     id: 0,
-    icon: <MdHome size={20} />,
+    icon: <MdHome />,
     name: "Home",
   },
   {
     id: 20,
-    icon: <FaGamepad size={20}/>,
+    icon: <FaGamepad/>,
     name: "Gaming",
   },
   { id: 2,
-    icon: <SiDsautomobiles size={20}/>,
+    icon: <SiDsautomobiles/>,
     name: "Automobiles",
   },
   {
     id: 17,
-    icon: <MdOutlineSportsBasketball size={20}/>,
+    icon: <MdOutlineSportsBasketball/>,
     name: "Sports",
   },
   {
     id: 24,
-    icon: <SiDcentertainment size={20}/>,
+    icon: <SiDcentertainment/>,
     name: "Entertainment",
   },
   {
     id: 28,
-    icon: <GrTechnology size={20}/>,
-    name: "Tech",
+    icon: <GrTechnology/>,
+    name: "Technology",
   },
   {
     id: 10,
-    icon: <FaMusic size={20}/>,
+    icon: <FaMusic/>,
     name: "Music",
   },
   {
     id: 22,
-    icon: <LiaBlogSolid size={20}/>,
+    icon: <LiaBlogSolid/>,
     name: "Blog",
   },
   {
     id: 25,
-    icon: <FaRegNewspaper size={20}/>,
+    icon: <FaRegNewspaper/>,
     name: "News",
   },
 ];

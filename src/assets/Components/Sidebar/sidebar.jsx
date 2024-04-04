@@ -9,7 +9,7 @@ const sidebar = ({ sidebar, category, setCategory }) => {
         {sidebarLists.map((lists, index) => {
           return (
             <div
-              className={`flex cursor-pointer items-center p-2 my-3 space-x-2 ${
+              className={`flex cursor-pointer items-center text-[26px] p-2 my-3 space-x-2 ${
                 category === lists.id ? "bg-gray-200 rounded-xl" : ""
               }`}
               key={index}
@@ -25,7 +25,7 @@ const sidebar = ({ sidebar, category, setCategory }) => {
         })}
       </div>
       <div className="hidden md:block px-2">
-        <h1 className={`${sidebar ? "mb-3 font-bold uppercase" : "hidden"}`}>
+        <h1 className={`${sidebar ? "mb-3 font-bold" : "hidden"}`}>
           Subscribed
         </h1>
         {subscribed.map((subscribe, index) => {
@@ -33,7 +33,7 @@ const sidebar = ({ sidebar, category, setCategory }) => {
             <div className="flex cursor-pointer items-center my-3 p-2 space-x-2" key={index}>
               <img
                 src={subscribe.image}
-                className="h-full w-[20px] object-cover object-center rounded-full"
+                className="h-full w-[26px] object-cover object-center rounded-full"
               />
               <p className={`${sidebar ? "text-sm" : "hidden"}`}>
                 {subscribe.name}

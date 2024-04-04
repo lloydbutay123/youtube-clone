@@ -7,7 +7,7 @@ const home = ({ sidebar }) => {
   return (
     < div className="flex">
       <Sidebar sidebar={sidebar} category={category} setCategory={setCategory} />
-      <div className={`container ${sidebar ? "" : "large-container"}`}>
+      <div className={`grid sm:grid-cols-1 p-2 gap-3 ${sidebar ? "md:grid-cols-3" : "md:grid-cols-4 p-2 gap-3"}`}>
         <Feed category={category} />
       </div>
     </div>
