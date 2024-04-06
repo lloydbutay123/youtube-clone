@@ -1,22 +1,22 @@
-import { MdHome } from "react-icons/md";
-import { FaGamepad } from "react-icons/fa6";
+import { RiHome5Fill } from "react-icons/ri";
+import { SiYoutubegaming } from "react-icons/si";
 import { SiDsautomobiles } from "react-icons/si";
-import { MdOutlineSportsBasketball } from "react-icons/md";
+import { MdSportsBasketball } from "react-icons/md";
 import { SiDcentertainment } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
-import { FaMusic } from "react-icons/fa";
+import { BiSolidMusic } from "react-icons/bi";
 import { LiaBlogSolid } from "react-icons/lia";
 import { FaRegNewspaper } from "react-icons/fa6";
 
 const sidebarLists = [
   {
     id: 0,
-    icon: <MdHome />,
+    icon: <RiHome5Fill />,
     name: "Home",
   },
   {
     id: 20,
-    icon: <FaGamepad/>,
+    icon: <SiYoutubegaming/>,
     name: "Gaming",
   },
   { id: 2,
@@ -25,7 +25,7 @@ const sidebarLists = [
   },
   {
     id: 17,
-    icon: <MdOutlineSportsBasketball/>,
+    icon: <MdSportsBasketball/>,
     name: "Sports",
   },
   {
@@ -40,7 +40,7 @@ const sidebarLists = [
   },
   {
     id: 10,
-    icon: <FaMusic/>,
+    icon: <BiSolidMusic/>,
     name: "Music",
   },
   {

@@ -15,10 +15,14 @@ const navbar = ({ setSidebar }) => {
   return (
     <nav className="flex justify-between p-2">
       <div className="flex items-center md:space-x-3 text-white">
-        <SlMenu
-          className=" text-[35px] hidden md:flex cursor-pointer text-black hover:bg-gray-500 p-2"
-          onClick={() => setSidebar((prev) => (prev === false ? true : false))}
-        />
+        <button className="hidden md:flex p-2 hover:bg-gray-200 rounded-full">
+          <SlMenu
+            className="text-black text-[20px]"
+            onClick={() =>
+              setSidebar((prev) => (prev === false ? true : false))
+            }
+          />
+        </button>
         <img
           src={Youtube}
           className="w-[100px] md:w-[100px] cursor-pointer"
@@ -28,20 +32,55 @@ const navbar = ({ setSidebar }) => {
       <div className="flex ml-auto md:m-auto space-x-3">
         <div className="flex items-center justify-end">
           <input
-            className="rounded-full hidden md:flex w-[50vw] h-10 p-3 text-black border-2 "
+            className="rounded-full hidden md:flex w-[50vw] h-10 p-5 text-black border-2"
             placeholder="Search"
           />
-          <FaSearch className="text-[35px] absolute cursor-pointer text-black m-auto p-2 md:mr-3" />
+          <button className="absolute bg-gray-200 m-auto py-2 px-4 md:mr-1 rounded-full">
+            <FaSearch
+              className="text-black text-[20px]"
+              onClick={() =>
+                setSidebar((prev) => (prev === false ? true : false))
+              }
+            />
+          </button>
         </div>
         <div className="hidden md:flex items-center m-auto">
-          <FaMicrophone className="text-[35px] p-2 bg-gray-200 rounded-full" />
+          <button className="p-2 bg-black rounded-full">
+            <FaMicrophone
+              className="text-black text-[20px] text-white"
+              onClick={() =>
+                setSidebar((prev) => (prev === false ? true : false))
+              }
+            />
+          </button>
         </div>
       </div>
 
       <div className="flex items-center text-white space-x-3">
-        <MdOutlineVideoCall className="hidden text-[35px] cursor-pointer text-black md:flex p-2 hover:bg-gray-200 rounded-full" />
-        <MdNotificationsNone className="md:text-[35px] text-[25px] text-black cursor-pointer hover:bg-gray-200 rounded-full md:p-2" />
-        <MdOutlinePerson className="md:text-[35px] text-[25px] text-black cursor-pointer hover:bg-gray-200 rounded-full md:p-2" />
+        <button className="hidden md:flex p-2 hover:bg-gray-200 rounded-full">
+          <MdOutlineVideoCall
+            className="text-black text-[20px]"
+            onClick={() =>
+              setSidebar((prev) => (prev === false ? true : false))
+            }
+          />
+        </button>
+        <button className="p-2 hover:bg-gray-200 rounded-full">
+          <MdNotificationsNone
+            className="text-black text-[20px]"
+            onClick={() =>
+              setSidebar((prev) => (prev === false ? true : false))
+            }
+          />
+        </button>
+        <button className="p-2 hover:bg-gray-200 rounded-full">
+          <MdOutlinePerson
+            className="text-black text-[20px]"
+            onClick={() =>
+              setSidebar((prev) => (prev === false ? true : false))
+            }
+          />
+        </button>
       </div>
     </nav>
   );
